@@ -51,4 +51,32 @@ var listQuestions = [
   css
 ]
 
+// timer dom element
+var timerEl = document.querySelector(".timer")
 
+
+// page dom elements
+
+var introEl = document.querySelector(".intro")
+var quizEl = document.querySelector(".quiz")
+var resetHighScoreEl= document.querySelector(".resetBtn")
+var resultEl  = document.querySelector(".results")
+var scoreEl = document.querySelector(".score")
+var QuestionEl = document.querySelector(".question")
+var answerOneEl = document.querySelector(".answerOne")
+var answerTwoEl = document.querySelector(".answerTwo")
+var answerThreeEl = document.querySelector(".answerThree")
+var answerFourEl = document.querySelector(".answerFour")
+var highScorceListEL = document.querySelector(".high-score-list")
+var topEl = document.querySelector(".top")
+var rightOrWrongEl = document.querySelector(".rightOrWrong")
+
+// button Doms
+var startBtnEl = document.querySelector(".startBtn")
+var submitBtnEl = document.querySelector(".submitBtn")
+var goBackBtnEl = document.querySelector(".goBackBtn")
+var topScoreEl = document.querySelector(".topScore")
+
+var userName = document.querySelector(".userName")
+
+var listScoresEl = document.querySelector(".listScores")
