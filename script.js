@@ -80,3 +80,12 @@ var topScoreEl = document.querySelector(".topScore")
 var userName = document.querySelector(".userName")
 
 var listScoresEl = document.querySelector(".listScores")
+
+// visibilty set
+resultEl.hidden = true
+listScoresEl.hidden = true
+QuestionEl.hidden = true
+answerOneEl.hidden = true
+answerTwoEl.hidden = true
+answerThreeEl.hidden = true
+answerFourEl.hidden = true
