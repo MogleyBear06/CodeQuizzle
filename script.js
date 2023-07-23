@@ -153,3 +153,27 @@ var startQuiz = function(){
    
   //loops through the list of objects
   }
+
+  var resetIntro = function(){
+    console.log("reset ran")
+  resultEl.hidden = true
+  listScoresEl.hidden = true
+  QuestionEl.hidden = true
+  answerOneEl.hidden = true
+  answerTwoEl.hidden = true
+  answerThreeEl.hidden = true
+  answerFourEl.hidden = true
+  
+  }
+  // Hidden intro after quiz starts
+  var hideIntro = function(){
+    console.log("Hide is working")
+    introEl.hidden = true
+    quizEl.hidden = false
+    QuestionEl.hidden = false
+    answerOneEl.hidden = false
+    answerTwoEl.hidden = false
+    answerThreeEl.hidden = false
+    answerFourEl.hidden = false
+  
+  }
