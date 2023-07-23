@@ -215,3 +215,50 @@ var startQuiz = function(){
       }
     }
   }
+
+  var verifyAnswer = function (event) {
+
+    var timeOutID = 0;
+  //test to see what was clicked on
+  var thisAnswer = event.target
+  console.log("User choice " + thisAnswer.textContent)
+  console.log(listQuestions[currentQuestion].correctAnswer)
+  console.log(listQuestions[currentQuestion])
+  
+  
+    //test to see if the user answer id correct
+    if (thisAnswer.textContent === listQuestions[currentQuestion].correctAnswer){
+  
+  
+      rightOrWrongEl.textContent = "Correct"
+  
+      console.log("The correct answer " + listQuestions[currentQuestion].correctAnswer)
+  
+      // moves to the next question 
+      currentQuestion +=1 ;
+      //calls the display function to move to the next question 
+      timeOutID=window.setTimeout(displayQuestion,600)
+  
+     
+    
+  
+    }
+    else{
+  
+      rightOrWrongEl.textContent= "Wrong"
+  
+      console.log("This answer is wroong" )
+      //subtracts time for wrong answer.
+      subtractTime();
+  
+      // moves to the next question 
+      currentQuestion++;
+  
+      //calls the display function to move to the next question 
+      timeOutID=window.setTimeout(displayQuestion,600)
+      
+  
+    }
+  }
+
+  
