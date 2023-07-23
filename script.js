@@ -338,5 +338,18 @@ var endGame = function () {
     timeOutID=window.setTimeout(startQuiz,2000)
   
   }
+
+  //This button starts the quiz 
+startBtnEl.addEventListener("click", startQuiz)
+submitBtnEl.addEventListener("click",submitScorces )
+goBackBtnEl.addEventListener("click",startQuiz)
+
+topScoreEl.addEventListener("click", init )
+answerOneEl.addEventListener("click",verifyAnswer)
+answerTwoEl.addEventListener("click",verifyAnswer)
+answerThreeEl.addEventListener("click",verifyAnswer)
+answerFourEl.addEventListener("click",verifyAnswer)
+resetHighScoreEl.addEventListener("click", resetHighScore)
+
   
 
