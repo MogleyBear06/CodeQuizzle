@@ -177,3 +177,41 @@ var startQuiz = function(){
     answerFourEl.hidden = false
   
   }
+
+  var displayQuestion = function(){
+
+    hideIntro();
+  
+    console.log(currentQuestion)
+    console.log(listQuestions.length)
+  
+  
+    //end the quiz if there are no more question left
+    if(currentQuestion == listQuestions.length){
+      
+      
+     endGame();
+    }
+    else{
+  
+    // this shows the question options
+    QuestionEl.hidden = false
+    answerOneEl.hidden = false
+    answerTwoEl.hidden = false
+    answerThreeEl.hidden = false
+    answerFourEl.hidden = false
+  
+    //reset the answers
+    var listAnswer = document.querySelectorAll("#choice")
+  
+    // renders the question
+    QuestionEl.textContent = listQuestions[currentQuestion].question;
+  
+    //display answer
+    for(var i = 0; i < listQuestions[currentQuestion].answers.length; i++){
+      listAnswer[i].textContent = listQuestions[currentQuestion].answers[i];
+      console.log("the correct answer is " + listQuestions[currentQuestion].correctAnswer)
+  
+      }
+    }
+  }
