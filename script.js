@@ -280,3 +280,30 @@ var endGame = function () {
     quizResults();
   }
 
+  var quizResults = function (){
+    //displays  the players score
+    scoreEl.textContent = playerScore
+  }
+  
+  // create a function to save player score and name
+  
+  var submitScorces = function (event){
+    event.preventDefault();
+    resultEl.hidden= true
+     //save the user name as a var
+    var user = userName.value.trim()
+  
+    console.log(user)
+  
+    var userScore = {
+      name: user,
+      Highscore: playerScore,
+    }
+    console.log(userScore)
+    //save the push the user infor the socre list array
+    scoreList.push(userScore)
+    saveScore();
+    showScore();
+    
+  }
+
