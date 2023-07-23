@@ -139,3 +139,17 @@ function init() {
     }
     showScore();
   }
+  // create a function that iterates over a set of question objects this function should call a function based on the   result.
+// Starts the quiz through a set of function calls 
+var startQuiz = function(){
+
+    currentQuestion = 0
+    quizTime = 60;
+    // this hides the intro text one the page displays 
+   //starts timer over
+    timerFunc();
+    resetIntro();
+    displayQuestion();
+   
+  //loops through the list of objects
+  }
