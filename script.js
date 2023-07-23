@@ -89,3 +89,40 @@ answerOneEl.hidden = true
 answerTwoEl.hidden = true
 answerThreeEl.hidden = true
 answerFourEl.hidden = true
+
+// create a timer function to start  the quiz and timer  via a button connected to a event listener  
+var timerFunc = function(){
+  
+
+    console.log("timer is working")
+    // this sets the timer dom to 60
+    timerEl.textContent = quizTime;
+    
+
+    // this is where the time is decreased
+     timeInterval = setInterval(function () {
+        // As long as the `quizTime` is greater than 1
+        if (quizTime >= 1) {
+          // Set the `textContent` of `timerEl` to show the remaining seconds
+          timerEl.textContent = quizTime + ' seconds remaining';
+          // Decrement `quizTime` by 1
+          quizTime--;
+        } else if (quizTime === 1) {
+          // When `quizTime` is equal to 1, rename to 'second' instead of 'seconds'
+          timerEl.textContent = quizTime + ' second remaining';
+          timeLeft--;
+         
+         
+        } else {
+          // Once `quizTime` gets to 0, set `timerEl` to an empty string
+          timerEl.textContent = '';
+          // Use `clearInterval()` to stop the timer
+          clearInterval(timeInterval);
+          // Call the `displayMessage()` function
+          quizTime -= 1
+          endGame();
+          
+          ;
+        }
+      }, 1000);
+}
