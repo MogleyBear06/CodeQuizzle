@@ -307,3 +307,36 @@ var endGame = function () {
     
   }
 
+  var showScore = function(){
+  
+    listScoresEl.hidden = false
+    introEl.hidden = true
+    quizEl.hidden= true
+    highScorceListEL.innerHTML=""
+  
+     for(var i= 0; i< scoreList.length; i++) {
+       var storedScores = scoreList[i]
+       var li = document.createElement("li")
+  
+      li.textContent="Name " + scoreList[i].name + "Score " + scoreList[i].Highscore 
+  
+      highScorceListEL.appendChild(li)
+  
+  
+  
+    }
+  }
+  var saveScore = function() {
+    localStorage.setItem("ScoresList", JSON.stringify(scoreList));
+  };
+  
+  //reset
+  var resetHighScore= function(){
+    listScoresEl.innerHTML="High Score Erased Quiz will Restart"
+    localStorage.clear()
+    scoreList = []
+    timeOutID=window.setTimeout(startQuiz,2000)
+  
+  }
+  
+
