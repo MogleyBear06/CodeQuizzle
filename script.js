@@ -239,9 +239,6 @@ var startQuiz = function(){
       //calls the display function to move to the next question 
       timeOutID=window.setTimeout(displayQuestion,600)
   
-     
-    
-  
     }
     else{
   
@@ -257,8 +254,29 @@ var startQuiz = function(){
       //calls the display function to move to the next question 
       timeOutID=window.setTimeout(displayQuestion,600)
       
-  
     }
   }
 
+  // end game function
+var endGame = function () {
+
   
+    console.log("Endgame ran")
+    // hide all the dom elements once the  quiz is over
+    QuestionEl.hidden = true
+    answerOneEl.hidden = true
+    answerTwoEl.hidden = true
+    answerThreeEl.hidden = true
+    answerFourEl.hidden = true
+    resultEl.hidden = false
+  
+  
+    // call function stop timer and save it as a score
+    //set player score equal to time left
+    playerScore = quizTime +1
+    clearInterval(timeInterval);
+    
+    // call function to show quiz results
+    quizResults();
+  }
+
