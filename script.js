@@ -126,3 +126,16 @@ var timerFunc = function(){
         }
       }, 1000);
 }
+
+function init() {
+    // need to parse array of user score objects
+    var storedScoreList = JSON.parse(localStorage.getItem("ScoresList"));
+    console.log(storedScoreList)
+  
+    // assign the parsed array to scoreList array to render later
+    if (storedScoreList !== null) {
+      scoreList = storedScoreList;
+      console.log(scoreList)
+    }
+    showScore();
+  }
